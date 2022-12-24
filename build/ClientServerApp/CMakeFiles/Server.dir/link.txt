@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Server.dir/Server.cpp.o -o Server  -Wl,-rpath,/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build libServer_objects.a ../libpmvankerSocket.so 
