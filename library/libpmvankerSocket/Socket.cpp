@@ -49,7 +49,10 @@ namespace pmvankerSocket
     ssize_t Socket::_recvfrom(int sfd, void *data, size_t len)
     {
         if ((recvfrom(sfd, data, len, 0, (struct sockaddr *)&client, &client_len)) < 0)
+        {
+            data = nullptr;
             return error;
+        }
 
         return success;
     }
@@ -65,7 +68,10 @@ namespace pmvankerSocket
     ssize_t Socket::_recv(int sfd, void *_data, size_t len)
     {
         if ((recv(sfd, &_data, len, 0)) < 0)
+        {
+            _data = nullptr;
             return error;
+        }
 
         return success;
     }
@@ -136,8 +142,14 @@ namespace pmvankerSocket
 
     int Socket::_read(int sfd, void *data, size_t len)
     {
-        if ((read(sfd, data, len)) < 0)
+        int ret = read(sfd, data, len);
+        if (ret <= 0)
+        {
+            data = nullptr;
+            close(active_sfd);
+            active_sfd = 0;
             return error;
+        }
         return success;
     }
 

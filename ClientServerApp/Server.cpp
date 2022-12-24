@@ -7,7 +7,7 @@ int main()
     std::cout << "Server Start" << std::endl;
 
     Socket *TcpSocket = Socket::create_socket(AF_INET, SOCK_STREAM, PORT);
-    if (TcpSocket->_socket() == success)
+    if (TcpSocket != nullptr)
         std::cout << "Server Socket Created" << std::endl;
     if (TcpSocket->_bind() == success)
         std::cout << "Server Socket Binded" << std::endl;
@@ -19,14 +19,19 @@ int main()
     std::cout << "New Connection Socket ip :" << TcpSocket->get_IP()
               << " Port: " << TcpSocket->get_Port() << std::endl;
 
-    std::string data;
     char buffer[BUFFER_SIZE];
     while (1)
     {
         bzero(buffer,BUFFER_SIZE);
-        TcpSocket->_read(TcpSocket->get_active_sfd(), buffer, BUFFER_SIZE);
-        data.assign(buffer);
-        std::cout << "Message :" << data << std::endl;
+        if ( TcpSocket->_read(TcpSocket->get_active_sfd(), buffer, BUFFER_SIZE) == success)
+        {
+            if(TcpSocket->get_active_sfd())
+                std::cout << "Message :" << buffer << std::endl;
+            else
+                break;
+        }
+        else    
+            break;
     }
 
     return EXIT_SUCCESS;

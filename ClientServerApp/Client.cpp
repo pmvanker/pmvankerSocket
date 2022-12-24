@@ -7,7 +7,7 @@ int main()
     std::cout << "Client Start" << std::endl;
     Socket *TcpSocket = Socket::create_socket(AF_INET, SOCK_STREAM, PORT);
 
-    if (TcpSocket->_socket() == success)
+    if (TcpSocket != nullptr)
         std::cout << "Client Socket Created" << std::endl;
     if (TcpSocket->_connect() == success)
         std::cout << "Client Socket Connected" << std::endl;

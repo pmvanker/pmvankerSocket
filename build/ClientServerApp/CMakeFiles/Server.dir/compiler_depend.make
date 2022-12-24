@@ -235,12 +235,19 @@ ClientServerApp/CMakeFiles/Server.dir/Server.cpp.o: ../ClientServerApp/Server.cp
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
+
+/usr/include/string.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/limits:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/c++/11/ratio:
 
@@ -409,6 +416,8 @@ ClientServerApp/CMakeFiles/Server.dir/Server.cpp.o: ../ClientServerApp/Server.cp
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
