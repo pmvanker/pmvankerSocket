@@ -1,9 +1,9 @@
 ClientServerApp/CMakeFiles/Server.dir/Server.cpp.o: \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/Server.cpp \
+ /home/pmvanker/github/pmvankerSocket/ClientServerApp/Server.cpp \
  /usr/include/stdc-predef.h \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/Server.hpp \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/../library/libpmvankerSocket/Socket.hpp \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/../library/libpmvankerSocket/Headers.hpp \
+ /home/pmvanker/github/pmvankerSocket/ClientServerApp/Server.hpp \
+ /home/pmvanker/github/pmvankerSocket/ClientServerApp/../library/libpmvankerSocket/Socket.hpp \
+ /home/pmvanker/github/pmvankerSocket/ClientServerApp/../library/libpmvankerSocket/Headers.hpp \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -189,4 +189,5 @@ ClientServerApp/CMakeFiles/Server.dir/Server.cpp.o: \
  /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h

@@ -16,14 +16,14 @@ namespace pmvankerSocket
         server.sin_family = domain;
         server.sin_port = htons(port);
         server.sin_addr.s_addr = INADDR_ANY;
-        if ( (bind(master_sfd, (sockaddr *)&server, sizeof(server))) < 0)
+        if ((bind(master_sfd, (sockaddr *)&server, sizeof(server))) < 0)
             return error;
         return success;
     }
 
     int Socket::_listen()
     {
-        if ( (listen(master_sfd, backlog)) < 0)
+        if ((listen(master_sfd, backlog)) < 0)
             return error;
         return success;
     }
@@ -41,41 +41,38 @@ namespace pmvankerSocket
         server.sin_family = domain;
         server.sin_port = htons(port);
         server.sin_addr.s_addr = INADDR_ANY;
-        if ( (connect(master_sfd, (struct sockaddr *)&server, server_len)) < 0)
+        if ((connect(master_sfd, (struct sockaddr *)&server, server_len)) < 0)
             return error;
         return success;
     }
-        
 
-    template <class T>
-    ssize_t Socket::_recvfrom(T &_data)
+    ssize_t Socket::_recvfrom(int sfd, void *data, size_t len)
     {
-        if ( (recvfrom(active_sfd, &_data, sizeof(_data), 0, (struct sockaddr*)&client, &client_len)) < 0)
+        if ((recvfrom(sfd, data, len, 0, (struct sockaddr *)&client, &client_len)) < 0)
             return error;
 
         return success;
     }
 
-    template <class T>
-    ssize_t Socket::_sendto(const T data) const
+    ssize_t Socket::_sendto(int sfd, const void *data, size_t len) const
     {
-        if( (sendto(master_sfd, &data, sizeof(data), 0, (struct sockaddr*)&client, &client_len)) < 0 )
+        if ((sendto(sfd, data, len, 0, (struct sockaddr *)&client, client_len)) < 0)
             return error;
 
         return success;
     }
 
-    ssize_t Socket::_recv(void *_data, size_t len)
+    ssize_t Socket::_recv(int sfd, void *_data, size_t len)
     {
-        if ( (recv(active_sfd, &_data, len, 0)) < 0)
+        if ((recv(sfd, &_data, len, 0)) < 0)
             return error;
 
         return success;
     }
 
-    ssize_t Socket::_send(void *data, size_t len) const
+    ssize_t Socket::_send(int sfd,const void *data, size_t len) const
     {
-        if( (send(master_sfd, &data, len, 0)) < 0 )
+        if ((send(sfd, &data, len, 0)) < 0)
             return error;
 
         return success;
@@ -101,16 +98,16 @@ namespace pmvankerSocket
         }
     }
 
-    Socket::~Socket(){
-        if(master_sfd != 0)
+    Socket::~Socket()
+    {
+        if (master_sfd != 0)
             close(master_sfd);
-        
-        if(active_sfd != 0)
-            close(active_sfd);
-        
-        delete socket_obj;
-    }  // Default Destructor
 
+        if (active_sfd != 0)
+            close(active_sfd);
+
+        delete socket_obj;
+    } // Default Destructor
 
     Socket *Socket::create_socket(int _domain, int _type, int _port)
     {
@@ -130,30 +127,16 @@ namespace pmvankerSocket
         return ntohs(client.sin_port);
     }
 
-    int Socket::write_master_sfd(void *data, size_t len) const
+    int Socket::_write(int sfd, const void *data, size_t len) const
     {
-        if( (write(master_sfd,data,len)) < 0)
+        if ((write(sfd, data, len)) < 0)
             return error;
         return success;
     }
 
-    int Socket::read_master_sfd(void *data, size_t len)
+    int Socket::_read(int sfd, void *data, size_t len)
     {
-        if( (read(master_sfd,data,len)) < 0)
-            return error;
-        return success;
-    }
-
-    int Socket::write_active_sfd(void *data, size_t len) const
-    {
-        if( (write(active_sfd,data,len)) < 0)
-            return error;
-        return success;
-    }
-
-    int Socket::read_active_sfd(void *data, size_t len)
-    {
-        if( (read(active_sfd,data,len)) < 0)
+        if ((read(sfd, data, len)) < 0)
             return error;
         return success;
     }

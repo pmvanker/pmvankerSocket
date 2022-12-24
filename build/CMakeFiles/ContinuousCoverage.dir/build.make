@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket
+CMAKE_SOURCE_DIR = /home/pmvanker/github/pmvankerSocket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build
+CMAKE_BINARY_DIR = /home/pmvanker/github/pmvankerSocket/build
 
 # Utility rule file for ContinuousCoverage.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousCoverage.dir/clean:
 .PHONY : CMakeFiles/ContinuousCoverage.dir/clean
 
 CMakeFiles/ContinuousCoverage.dir/depend:
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pmvanker/github/pmvankerSocket/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pmvanker/github/pmvankerSocket /home/pmvanker/github/pmvankerSocket /home/pmvanker/github/pmvankerSocket/build /home/pmvanker/github/pmvankerSocket/build /home/pmvanker/github/pmvankerSocket/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousCoverage.dir/depend
 

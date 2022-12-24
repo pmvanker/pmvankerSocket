@@ -1,4 +1,4 @@
-# Install script for directory: /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp
+# Install script for directory: /home/pmvanker/github/pmvankerSocket/ClientServerApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

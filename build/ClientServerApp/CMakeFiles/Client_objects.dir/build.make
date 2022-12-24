@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket
+CMAKE_SOURCE_DIR = /home/pmvanker/github/pmvankerSocket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build
+CMAKE_BINARY_DIR = /home/pmvanker/github/pmvankerSocket/build
 
 # Include any dependencies generated for this target.
 include ClientServerApp/CMakeFiles/Client_objects.dir/depend.make
@@ -72,16 +72,16 @@ include ClientServerApp/CMakeFiles/Client_objects.dir/flags.make
 ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o: ClientServerApp/CMakeFiles/Client_objects.dir/flags.make
 ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o: ../ClientServerApp/Client.cpp
 ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o: ClientServerApp/CMakeFiles/Client_objects.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o"
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o -MF CMakeFiles/Client_objects.dir/Client.cpp.o.d -o CMakeFiles/Client_objects.dir/Client.cpp.o -c /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pmvanker/github/pmvankerSocket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o"
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o -MF CMakeFiles/Client_objects.dir/Client.cpp.o.d -o CMakeFiles/Client_objects.dir/Client.cpp.o -c /home/pmvanker/github/pmvankerSocket/ClientServerApp/Client.cpp
 
 ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client_objects.dir/Client.cpp.i"
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/Client.cpp > CMakeFiles/Client_objects.dir/Client.cpp.i
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pmvanker/github/pmvankerSocket/ClientServerApp/Client.cpp > CMakeFiles/Client_objects.dir/Client.cpp.i
 
 ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client_objects.dir/Client.cpp.s"
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp/Client.cpp -o CMakeFiles/Client_objects.dir/Client.cpp.s
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pmvanker/github/pmvankerSocket/ClientServerApp/Client.cpp -o CMakeFiles/Client_objects.dir/Client.cpp.s
 
 # Object files for target Client_objects
 Client_objects_OBJECTS = \
@@ -93,19 +93,19 @@ Client_objects_EXTERNAL_OBJECTS =
 ClientServerApp/libClient_objects.a: ClientServerApp/CMakeFiles/Client_objects.dir/Client.cpp.o
 ClientServerApp/libClient_objects.a: ClientServerApp/CMakeFiles/Client_objects.dir/build.make
 ClientServerApp/libClient_objects.a: ClientServerApp/CMakeFiles/Client_objects.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libClient_objects.a"
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -P CMakeFiles/Client_objects.dir/cmake_clean_target.cmake
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client_objects.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pmvanker/github/pmvankerSocket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libClient_objects.a"
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -P CMakeFiles/Client_objects.dir/cmake_clean_target.cmake
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client_objects.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ClientServerApp/CMakeFiles/Client_objects.dir/build: ClientServerApp/libClient_objects.a
 .PHONY : ClientServerApp/CMakeFiles/Client_objects.dir/build
 
 ClientServerApp/CMakeFiles/Client_objects.dir/clean:
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -P CMakeFiles/Client_objects.dir/cmake_clean.cmake
+	cd /home/pmvanker/github/pmvankerSocket/build/ClientServerApp && $(CMAKE_COMMAND) -P CMakeFiles/Client_objects.dir/cmake_clean.cmake
 .PHONY : ClientServerApp/CMakeFiles/Client_objects.dir/clean
 
 ClientServerApp/CMakeFiles/Client_objects.dir/depend:
-	cd /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/ClientServerApp /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build/ClientServerApp/CMakeFiles/Client_objects.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pmvanker/github/pmvankerSocket/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pmvanker/github/pmvankerSocket /home/pmvanker/github/pmvankerSocket/ClientServerApp /home/pmvanker/github/pmvankerSocket/build /home/pmvanker/github/pmvankerSocket/build/ClientServerApp /home/pmvanker/github/pmvankerSocket/build/ClientServerApp/CMakeFiles/Client_objects.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ClientServerApp/CMakeFiles/Client_objects.dir/depend
 

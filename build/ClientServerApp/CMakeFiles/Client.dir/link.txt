@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/Client.dir/Client.cpp.o -o Client  -Wl,-rpath,/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build libClient_objects.a ../libpmvankerSocket.so 
+/usr/bin/c++ CMakeFiles/Client.dir/Client.cpp.o -o Client  -Wl,-rpath,/home/pmvanker/github/pmvankerSocket/build libClient_objects.a ../libpmvankerSocket.so 

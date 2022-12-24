@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DPMVANKERSOCKET_LIBRARY -DpmvankerSocket_EXPORTS
 
-CXX_INCLUDES = -I/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/build -I/home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket
+CXX_INCLUDES = -I/home/pmvanker/github/pmvankerSocket/build -I/home/pmvanker/github/pmvankerSocket
 
 CXX_FLAGS = -fPIC -Wall -Wextra -std=gnu++11
 

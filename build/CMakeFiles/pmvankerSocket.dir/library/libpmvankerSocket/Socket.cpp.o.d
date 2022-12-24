@@ -1,8 +1,8 @@
 CMakeFiles/pmvankerSocket.dir/library/libpmvankerSocket/Socket.cpp.o: \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/library/libpmvankerSocket/Socket.cpp \
+ /home/pmvanker/github/pmvankerSocket/library/libpmvankerSocket/Socket.cpp \
  /usr/include/stdc-predef.h \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/library/libpmvankerSocket/Socket.hpp \
- /home/pmvanker/github/pmvankerVector/tcpip/pmvankerSocket/library/libpmvankerSocket/Headers.hpp \
+ /home/pmvanker/github/pmvankerSocket/library/libpmvankerSocket/Socket.hpp \
+ /home/pmvanker/github/pmvankerSocket/library/libpmvankerSocket/Headers.hpp \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
