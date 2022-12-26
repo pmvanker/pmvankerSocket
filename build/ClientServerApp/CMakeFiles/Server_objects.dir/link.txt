@@ -1,2 +1,0 @@
-/usr/bin/ar qc libServer_objects.a CMakeFiles/Server_objects.dir/Server.cpp.o
-/usr/bin/ranlib libServer_objects.a
