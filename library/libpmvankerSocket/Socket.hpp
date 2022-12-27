@@ -53,9 +53,9 @@ namespace pmvankerSocket
         Socket(const Socket &) = delete;
         void operator=(const Socket &) = delete;
 
-        ~Socket();
-
     public:
+        ~Socket();
+        
         /** @brief The socket() call creates a new socket.
          * @return a file descriptor used to refer to the newly created socket. */
         int _socket();
@@ -76,34 +76,24 @@ namespace pmvankerSocket
          * @return Returns 0 on success, or –1 on error */
         int _connect();
 
-        /** @brief The recvfrom() system calls receiv datagrams on a datagram socket
-         * @return Returns 0 on success, or –1 on error */
-        ssize_t _recvfrom(int, void *, size_t);
-
-        /** @brief The sendto() system calls send datagrams on a datagram socket
-         * @return Returns 0 on success, or –1 on error */
-        ssize_t _sendto(int, const void *, size_t) const;
-
-        /** @brief The recvfrom() system calls receiv datagrams on a datagram socket
-         * @return Returns 0 on success, or –1 on error */
-        ssize_t _recv(int, void *, size_t);
-
-        /** @brief The sendto() system calls send datagrams on a datagram socket
-         * @return Returns 0 on success, or –1 on error */
-        ssize_t _send(int, const void *, size_t) const;
-
         static Socket *create_socket(int , int , int);
 
-        std::string get_IP();
-        int get_Port();
+        sockaddr_in get_serverAddr(){ return server; }
+        sockaddr_in get_clientAddr(){ return client; }
+        int         get_master_sfd(){ return master_sfd; }
+        int         get_active_sfd(){ return active_sfd; }
+        char*       GET_CLIENT_IP(){ return inet_ntoa(client.sin_addr); }
+        int         GET_CLIENT_PORT(){ return ntohs(client.sin_port); }
+        char*       GET_SERVER_IP() {return inet_ntoa(server.sin_addr); }
+        int         GET_SERVER_PORT(){ return ntohs(server.sin_port); }
 
-        int _write(int, const void *, size_t) const;
-
-        int _read(int, void *, size_t);
-
-        int get_master_sfd(){ return master_sfd;}
-
-        int get_active_sfd(){ return active_sfd;}
+        void set_clientAddr(sockaddr_in _client){ client = _client;}
+        void set_serverAddr(sockaddr_in _server){ server = _server;}
+        int _write(int sfd, const void *data, size_t len) const{ return write(sfd, data, len); }
+        int _read(int sfd, void *data, size_t len){ return read(sfd, data, len);}
+        
+        void close_active_sfd();
+        void close_master_sfd();
     }; /*end of class Socket*/
 
 };
