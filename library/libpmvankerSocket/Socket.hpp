@@ -1,40 +1,43 @@
 #ifndef PMVANKERSOCKET_H
 #define PMVANKERSOCKET_H
 
-#include "Headers.hpp"
+#include <sys/types.h>  /* Primitive System Data Types */
+#include <sys/socket.h> /* Declarations of socket constants, types, and functions */
+#include <arpa/inet.h>
+#include <unistd.h> /*Symbolic Constants*/
+
 namespace pmvankerSocket
 {
-
 #define SOCKET_PORT_NUMBER 4000
 #define SOCKET_BACKLOG 10
 #define BUFFER_SIZE 1024
 
-    enum
-    {
-        error = -1,
-        success = 0,
-    };
-
-    class PMVANKERSOCKET_EXPORT Socket : virtual public std::exception
+    class Socket
     {
         /** @brief Communication Socket Domains
          * AF_UNIX: UNIX within kernel on same host sockaddr_un address structure
          * AF_INET: IPv4 network sockaddr_in address structure
          * AF_INET6: IPv6 network sockaddr_in6 address structure*/
         uint8_t domain;
+
         /** @brief Socket Type
          * SOCK_STREAM: Stream socket that is Sequenced, reliable, connection-based byte streams
          * SOCK_DGRAM: Datagram socket Connectionless, unreliable datagrams of fixed maximum length*/
         uint8_t type;
+
         /** @brief Socket Protocol
          * IPPROTO_IP: * Dummy protocol for TCP.  */
         uint8_t protocol;
+
         /** @brief file descriptor obtained from a socket(). */
         u_int32_t port;
+
         /** @brief file descriptor obtained from a socket(). */
         int master_sfd;
+
         /** @brief file descriptor obtained from a socket(). */
         int active_sfd;
+
         /** @brief number of backlogs connection. */
         uint32_t backlog;
 
